@@ -1,0 +1,15 @@
+h1{
+    color: orange;
+}
+
+p{
+    color: yellow;
+    background-color: grey;
+    font-size: 30px;
+    /* font-style:oblique; */
+    /* font-weight: bolder; */
+    /* letter-spacing: 30px; */
+   /* line-height: 100px;
+    word-spacing: 20px; */
+    /* font-family: sans-serif; */
+}
