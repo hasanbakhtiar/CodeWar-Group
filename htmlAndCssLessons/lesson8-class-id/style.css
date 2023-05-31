@@ -1,0 +1,68 @@
+/* li:nth-child(10){
+    color: red;
+}
+
+li:nth-child(5){
+    color: green;
+} */
+
+/* li:nth-child(4n-1){
+    color: yellow;
+    background-color: grey;
+} */
+
+
+/* .test{
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+
+
+.demo{
+    color: yellow;
+    background-color: grey;
+}
+
+
+#text{
+    font-size: 70px;
+}
+#data{
+    font-size: 100px;
+} */
+
+/* body{
+    background-color: bisque;
+} */
+
+
+#text-one{
+    font-weight: bolder;
+}
+
+
+#text-two{
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* li{
+    list-style: circle;
+} */
+
+
+/* 
+.text-data{
+    text-align: right;
+} */
+
+
+#text-three{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
