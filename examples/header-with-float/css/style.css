@@ -1,0 +1,55 @@
+body{
+    background-color: bisque;
+}
+.wrapper{
+    margin-left: 200px;
+}
+header{
+        width: 70%;
+}
+header h1{
+        font-size: 50px;
+        font-family: sans-serif;
+}
+header nav{
+    background-color: brown;
+    height: 30px;
+    width: 100%;
+}
+header nav ul{
+    padding:5px  ;
+    width: 123%;
+}
+header nav ul li{
+    float: left;
+    width: 25%;
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+/* main start */
+
+main{
+    height: auto;
+}
+main .sec-one{
+    width: 70%;
+}
+main .sec-one img{
+    float: left;
+}
+
+main .sec-two{
+    clear: both;
+}
+
+footer{
+    width: 70%  ;
+}
