@@ -1,0 +1,55 @@
+
+.main-box{
+    width: 70%;
+    height: 70vh;
+    background-color: black;
+    display: flex;
+    /* flex-wrap: wrap;
+    flex-direction: column; */
+    flex-flow: row wrap;
+    /* align-content: space-evenly; */
+    /* justify-content: space-between;
+    align-content:  space-between; */
+    column-gap: 50px;
+
+
+    
+    
+}
+.main-box .box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: #fff;
+    font-size: 50px;
+}
+
+.main-box .box:nth-child(1){
+    order: 1;
+    flex-shrink: 5;
+}
+
+.main-box .box:nth-child(2){
+    order: 2;
+    flex-shrink: 1;
+}
+
+.main-box .box:nth-child(3){
+    order: 3;
+    /* flex-grow: 1; */
+    align-self: flex-end;
+    flex-basis: 400px;
+
+}
+
+.main-box .box:nth-child(4){
+    order: 4;
+    flex-grow: 1;
+
+}
+
+.main-box .box:nth-child(5){
+    order: 5;
+    flex-grow: 1;
+
+}
