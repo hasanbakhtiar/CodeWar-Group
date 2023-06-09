@@ -1,0 +1,171 @@
+body,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.con{
+    width:60%
+}
+
+/* ============================= Reset End ====================================*/
+/* ============================= Header Start =================================  */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;  
+    justify-content: center;
+}
+header .con{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+header .con .logo{
+    width: 30%;
+}
+
+header .con nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+header .con nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+header .con nav ul li a{
+    color: #fff;
+    font-size: 17px;
+}
+header .con nav ul button{
+    border: none;
+    background: none;
+}
+
+header .con nav ul button i{
+    color: #fff;
+    font-size: 20px;
+    border-left: 2px solid #fff;
+    padding-left: 20px;
+}
+
+/* ============================= Header End =================================  */
+
+
+main .hero{
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 42% 100%, 0 84%);
+    width: 100%;
+    height: 85vh;
+    background-image: url('https://fixzer.dexignlab.com/xhtml/images/banner/banner-1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .hero .hero-content{
+    height: 370px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: space-between;
+
+}
+
+main .hero .hero-content *{
+    color: #fff;
+}
+
+main .hero .hero-content h1{
+    font-size: 70px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+main .hero .hero-content p{
+    text-align: center;
+}
+
+main .hero .hero-content button{
+
+
+    border: 2px solid #fff;
+    background: none;
+    padding: 20px 40px;
+    border-radius: 40px;
+    text-transform: uppercase;
+
+}
+/*======================================== Hero End ===================================*/
+/*======================================== Cards Start ===================================*/
+
+
+.cards{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards .con{
+    display: flex;
+    justify-content: space-between;
+}
+.cards .con .card{
+    width: 28%;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+
+}
+
+.cards .con .card:nth-child(1){
+background-color: #1a9bdc00;
+}
+
+
+.cards .con .card:nth-child(1){
+    background-color: #1a9bdc;
+    }
+
+
+.cards .con .card:nth-child(2){
+    background-color: #bdad9b;
+    }
+
+
+.cards .con .card:nth-child(3){
+    background-color: #f47a55;
+    }
+
+    .cards .con .card *{
+        color: #fff;
+    }
+
+    .cards .con .card h4{
+        font-size: 30px;
+    }
+/*======================================== Cards End ===================================*/
+
