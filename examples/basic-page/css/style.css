@@ -251,3 +251,11 @@ background-color: #1a9bdc00;
 
 /*======================================== Wash End ===================================*/
 
+.contact{
+    width: 100%;
+    height: 50vh;
+    background-image: url('https://fixzer.dexignlab.com/xhtml/images/background/bg-car.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} 
