@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    /* transform: translate(-50px,200px);
+    transform: scaleY(4); */
+    /* transform: scale(2,4); */
+    /* transform: skew(30deg,100deg); */
+    /* transform: rotate(30deg); */
+    /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* transform: matrix(1, -0.3, 0, 1, 100, 100); */
+    /* transform: rotate(100deg); */
+    /* transition-property:background-color,color,font-size ;
+    transition-duration: 1s;
+    transition-delay: 2s; */
+    /* transition: color 1s, background-color 3s,font-size 10s; */
+
+
+}
+
+/* .box:hover{
+    background-color: red;
+    color: yellow;
+    font-size: 30px;
+}
+
+   h1:hover{
+        color: red;
+    } */
