@@ -12,3 +12,15 @@
     background-color: #FFA24040;
     margin: 10px;
 }
+
+@media (max-width:1000px){
+.text-con{
+   display: none !important;
+}
+}
+
+@media (max-width:750px){
+    .text-con{
+       display: block !important;
+    }
+    }
