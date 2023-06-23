@@ -1,0 +1,14 @@
+.hero-bg{
+    height: 90vh;
+    background-image: url('../img/wall-background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.choice-us .card img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #FFA24040;
+    margin: 10px;
+}
