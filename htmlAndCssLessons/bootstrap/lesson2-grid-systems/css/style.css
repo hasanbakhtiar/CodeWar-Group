@@ -1,0 +1,6 @@
+.myprop{
+    background-color: brown;
+}
+.myprop *{
+    color: #fff !important;
+}
