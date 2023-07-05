@@ -17,10 +17,30 @@
 .text-con{
    display: none !important;
 }
+.trendy{
+    .card{
+        height: 50vh !important;
+    }
+}
 }
 
 @media (max-width:750px){
     .text-con{
        display: block !important;
     }
+    
+    }
+
+    .trendy{
+        .card{
+            border-radius: 0;
+            height: 30vh;
+            background-image:url('../img/marlon.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .card .btn{
+            border-radius: 0;
+        }
     }
