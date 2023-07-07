@@ -1,0 +1,30 @@
+@import url('my-bg.css');
+
+
+/* h1::before{
+    content: "new value";
+    display: block;
+} */
+
+/* .box{
+    position: relative;
+    width: 100px;
+    height: 400px;
+    background-color: red;
+    color: #fff;
+}
+
+.box::after{
+    transition: 1s;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    display: block;
+    width: 100px;
+    height: 0px;
+    background-color: rgba(0, 0, 0,.4);
+}
+
+.box:hover::after{
+    height: 400px;
+} */
