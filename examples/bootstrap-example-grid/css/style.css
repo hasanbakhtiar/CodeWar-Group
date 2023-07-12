@@ -1,0 +1,17 @@
+.box{
+    background-color: red;
+    height: 100px;
+}
+
+
+.pos-photo-1,.pos-photo-2,.pos-photo-3{
+        position: absolute;
+}
+
+.pos-photo-2{
+    top: 198px;
+    right:203px ;
+}
+.pos-photo-3{
+    top: 311px;
+}
