@@ -20,3 +20,20 @@
 //   }
 // }
 // btn.onclick = changeText;
+
+
+const text = document.querySelector('h1');
+const btn = document.querySelector('button');
+
+
+const surname = () => {
+  if (text.innerHTML === "Hasan") {
+    text.innerHTML = "Bakhtiar";
+    btn.innerHTML = "name";
+  } else {
+    text.innerHTML = "Hasan"
+    btn.innerHTML = 'surname'
+  }
+}
+
+btn.onclick = surname
