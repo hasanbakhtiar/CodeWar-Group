@@ -1,0 +1,15 @@
+.list{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.submenu{
+
+    width: 100px;
+    height: 0;
+    background-color: black;
+    color: #fff;
+    transition: 1s;
+}
