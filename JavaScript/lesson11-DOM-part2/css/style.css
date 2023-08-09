@@ -27,5 +27,40 @@
 
 
 
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+header ol{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+header button {
+    display: none;
+}
+menu{
+    position: absolute;
+    right: 0;
+    display: none;
+}
 
+@media (max-width:700px) {
+    
+header ol{
+    display: none;
+}
+header button{
+    display: block;
+}
+menu{
+    transition: 1s;
+    padding: 0;
+    width: 0px;
+    background-color: brown;
+    display: inline-block;
+}
+}

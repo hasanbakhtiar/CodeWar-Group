@@ -47,35 +47,39 @@
 // btn.onclick = toggle;
 
 
-const userdata = {
-    email:"info@text.com",
-    password:"test123"
-}
+// const userdata = {
+//     email:"info@text.com",
+//     password:"test123"
+// }
 
-const emailInput = document.querySelectorAll('input')[0];
-const passInput = document.querySelectorAll('input')[1];
-const alert = document.querySelector('#alert');
-const btn = document.querySelector('button');
+// const emailInput = document.querySelectorAll('input')[0];
+// const passInput = document.querySelectorAll('input')[1];
+// const alert = document.querySelector('#alert');
+// const btn = document.querySelector('button');
 
 
-btn.onclick=()=>{
-     if (!emailInput.value || !passInput.value) {
-        alert.innerHTML = "please, fill input"
-            alert.className = "alert alert-warning";
-     }else{
-        if (emailInput.value === userdata.email && passInput.value === userdata.password) {
-            // alert.innerHTML = "login successfully"
-            // alert.className = "alert alert-success";
-            window.location.replace("admin.html");
-        }else{
-            alert.innerHTML = "password or email is wrong!"
-            alert.className = "alert alert-danger";
+// btn.onclick=()=>{
+//      if (!emailInput.value || !passInput.value) {
+//         alert.innerHTML = "please, fill input"
+//             alert.className = "alert alert-warning";
+//      }else{
+//         if (emailInput.value === userdata.email && passInput.value === userdata.password) {
+//             // alert.innerHTML = "login successfully"
+//             // alert.className = "alert alert-success";
+//             window.location.replace("admin.html");
+//         }else{
+//             alert.innerHTML = "password or email is wrong!"
+//             alert.className = "alert alert-danger";
 
-        }
-     }
-}
+//         }
+//      }
+// }
     
 
+
+document.querySelector('button').onclick=()=>{
+    document.querySelector('menu').style.width = "200px"
+}
 
 
 
