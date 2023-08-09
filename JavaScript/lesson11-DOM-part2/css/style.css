@@ -1,4 +1,4 @@
-.list{
+/* .list{
     width: 30%;
     display: flex;
     justify-content: space-between;
@@ -7,9 +7,25 @@
 
 .submenu{
 
+    transition: 1s;
     width: 100px;
-    height: 0;
+    height: 0px;
     background-color: black;
     color: #fff;
+} */
+
+
+/* ol{
     transition: 1s;
-}
+    transform: translateX(-300px);
+    width: 10%;
+    height: auto;
+    padding: 40px;
+    background-color: bisque;
+} */
+
+
+
+
+
+
