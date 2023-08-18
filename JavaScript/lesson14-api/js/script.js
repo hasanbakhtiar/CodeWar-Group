@@ -1,12 +1,20 @@
-fetch('https://fakestoreapi.com/products')
-.then(res=>res.json())
-.then(data=>{
-    let li = "";
-    data.map(item=>{
-        li+=`
-        <img width="100" src="${item.image}" />
-        <li>${item.title}</li>
+fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(data => {
+        let col = "";
+        data.products.map(item => {
+            col += `
+      <div class="col-12 col-sm-12 col-md-3">
+      <div class="card" >
+      <img src="${item.images[0]}" height="300" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+      </div>
         `
+        })
+        document.querySelector('.row').innerHTML = col;
     })
-    document.querySelector('ol').innerHTML = li;
-})
