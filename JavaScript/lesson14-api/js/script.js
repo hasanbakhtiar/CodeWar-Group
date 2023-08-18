@@ -1,9 +1,12 @@
-fetch('https://dummyjson.com/products')
+let selectCategory = "smartphones";
+
+const productApi = ()=>{
+    fetch('https://dummyjson.com/products')
     .then(res => res.json())
     .then(data => {
         let col = "";
         data.products.map(item => {
-            if (item.category === "smartphones") {
+            if (item.category === selectCategory) {
                 col += `
             <div class="col-12 col-sm-12 col-md-3">
             <div class="card" >
@@ -20,3 +23,22 @@ fetch('https://dummyjson.com/products')
         })
         document.querySelector('.row').innerHTML = col;
     })
+}
+productApi();
+
+
+
+document.querySelectorAll('button')[0].onclick =()=>{
+        selectCategory = "smartphones";
+        productApi();
+}
+
+document.querySelectorAll('button')[1].onclick =()=>{
+    selectCategory = "laptops";
+    productApi();
+}
+
+document.querySelectorAll('button')[2].onclick =()=>{
+    selectCategory = "fragrances";
+    productApi();
+}
