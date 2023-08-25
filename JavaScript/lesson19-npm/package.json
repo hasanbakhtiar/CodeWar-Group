@@ -1,0 +1,20 @@
+{
+  "name": "lesson19-npm",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "speed-test"
+  },
+  "keywords": [
+    "JavaScript",
+    "Lesson"
+  ],
+  "author": "Hasan Bakhtiar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "speed-test": "^3.0.0"
+  }
+}

@@ -23,15 +23,22 @@
 
 
 
-
+const btn  = document.querySelector('button');
 
 const uploadFile =()=>{
     const myhttp = new XMLHttpRequest();
     myhttp.onload = function(){
             document.querySelector('h1').innerHTML = this.responseText;
     }
-    myhttp.open("GET",'../hello.txt',true);
+    if (btn.innerHTML ==='az') {
+        myhttp.open("GET",'../helloaz.txt',true);
+        btn.innerHTML = 'en';
+    }else{
+        myhttp.open("GET",'../helloen.txt',true);
+        btn.innerHTML = 'az';
+
+    }
     myhttp.send();
 }
 
-document.querySelector('button').onclick = uploadFile;
+btn.onclick = uploadFile;
