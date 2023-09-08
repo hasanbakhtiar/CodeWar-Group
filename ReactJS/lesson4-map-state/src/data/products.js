@@ -5,7 +5,7 @@ const shoes = [
         title: "Nike Airforce",
         color: "white",
         price: 70,
-        stock:true
+        stock:3
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const shoes = [
         title: "Vans Old Skool",
         color: "black",
         price: 90,
-        stock:true
+        stock:5
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const shoes = [
         title: "Adidas Sneakers",
         color: "pink",
         price: 50,
-        stock:false
+        stock:0
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const shoes = [
         title: "Vans bot",
         color: "blue",
         price: 150,
-        stock:true
+        stock:1
     }
 
 ]
