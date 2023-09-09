@@ -5,7 +5,7 @@ const shoes = [
         title: "Nike Airforce",
         color: "white",
         price: 70,
-        stock:3
+        stock:7
     },
     {
         id: 2,
