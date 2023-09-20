@@ -1,24 +1,28 @@
-import { useState } from "react"
-import {phonesData,laptopsData} from "./data";
+import { useEffect, useState } from "react"
+import { phonesData, laptopsData } from "./data";
+import axios from "axios";
 
 
 
 const App = () => {
 
+    const [info,setInfo] = useState([]);
+    
 
-    const [product,setProduct] = useState(phonesData);
+    useEffect(()=>{
+       axios.get('https://fakestoreapi.com/products')
+       .then(res=>setInfo(res.data))
+    },[])
+
 
 
     return (
         <div>
-            {/* <button onClick={()=>{setProduct(phonesData)}}>phone</button>
-            <button onClick={()=>{setProduct(laptopsData)}}>laptops</button>
-            <h1>{product.map(item=>(
-                <div>{item.title}</div>
-            ))}</h1> */}
-            <button>-</button>
-            <span>0</span>
-            <button>+</button>
+           <ol>
+            {info.map(item=>(
+                <li key={item.id}>{item.title}</li>
+            ))}
+           </ol>
 
         </div>
     )
