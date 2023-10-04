@@ -33,7 +33,9 @@ const Products = () => {
         </Col>
         <Col sm={12} md={9}>
           <Row className='g-5'>
-            {filterData.map(i => (
+            {filterData.length === 0 ? product.map(i => (
+              <SingleCard key={i.id} title={i.title} price={i.price} desc={i.description} photo={i.images[0]} id={i.id} />
+            )) : filterData.map(i => (
               <SingleCard key={i.id} title={i.title} price={i.price} desc={i.description} photo={i.images[0]} id={i.id} />
             ))}
 
