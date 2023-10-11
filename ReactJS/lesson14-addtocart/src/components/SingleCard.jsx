@@ -4,8 +4,22 @@ import Card from 'react-bootstrap/Card';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useCart } from 'react-use-cart';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const SingleCard = ({ title, photo, price, alldata, id }) => {
     const { addItem } = useCart();
+   const notify = ()=> toast.success(`${title} added!`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     return (
         <Col sm={6} md={4}>
             <Card >
@@ -16,7 +30,19 @@ const SingleCard = ({ title, photo, price, alldata, id }) => {
                         {price}$
                     </Card.Text>
                     <LinkContainer to={`/products/${id}`}><Button variant="primary">Read more</Button></LinkContainer>
-                    <Button variant='success' onClick={()=>{addItem(alldata)}} className='ms-3'>Add to cart</Button>
+                    <Button variant='success' onClick={()=>{notify(addItem(alldata))}} className='ms-3'>Add to cart</Button>
+                    <ToastContainer
+                        position="bottom-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="colored"
+                    />
                 </Card.Body>
             </Card>
         </Col>

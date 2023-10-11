@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 import { useCart } from 'react-use-cart';
 
 const Header = () => {
-  const {totalItems} = useCart();
+  const { totalItems } = useCart();
   const [product] = useContext(ProductContext);
   const [keyword, setKeyword] = useState();
   return (
@@ -44,7 +44,10 @@ const Header = () => {
                     <ul className="list-group">
                       {product.filter(i => i.title.toLocaleLowerCase().includes(keyword)).map(i => (
 
-                        <Link to={`/products/${i.id}`} key={i.id} className="list-group-item d-flex justify-content-between align-items-center" >{i.title}<img width={100} src={i.images[0]} alt='err' /></Link>
+                        <button type="button" style={{border:"none",background:'none'}} data-bs-dismiss="modal">
+                          <Link to={`/products/${i.id}`} key={i.id} className="list-group-item d-flex justify-content-between align-items-center" >{i.title}<img width={100} src={i.images[0]} alt='err' /></Link>
+                        </button>
+
                       ))}
 
                     </ul>

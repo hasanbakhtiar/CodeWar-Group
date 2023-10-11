@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import { Link, useParams } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { useCart } from 'react-use-cart';
 
 const ProductDetails = () => {
   const [product] = useContext(ProductContext);
   const { url } = useParams();
   const productDetails = product.find(p => p.id.toString() === url);
-
+  const {addItem} = useCart();
   return (
     <div>
       {productDetails === undefined ? <h1>loading</h1> :
@@ -14,11 +16,11 @@ const ProductDetails = () => {
           <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
 
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold text-light lh-1 mb-3">{productDetails.title}</h1>
+              <h1 className="display-5 fw-bold text-dark lh-1 mb-3">{productDetails.title}</h1>
               <p className="lead">{productDetails.description}</p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                 <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">{productDetails.price}$</button>
-                <Link to="/products" type="button" className="btn btn-outline-secondary btn-lg px-4">More</Link>
+                <Button type="button" onClick={()=>{addItem(productDetails)}} className="btn btn-success btn-lg px-4">Add to cart</Button>
               </div>
             </div>
             <div className="col-10 col-sm-8 col-lg-6">
