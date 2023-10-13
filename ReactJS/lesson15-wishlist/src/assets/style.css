@@ -1,0 +1,9 @@
+.light * {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.dark *{
+    color: #fff !important;
+    background-color: #000 !important;
+}
