@@ -75,6 +75,7 @@ const Header = () => {
           <button className='btn btn-dark ms-3' onClick={()=>{
             mode === "light" ? setMode('dark') : setMode('light'); 
             mode === "light" ? document.body.className = 'bg-dark' : document.body.className = 'bg-light'; 
+            mode === 'light' ? localStorage.setItem('mode','dark'):localStorage.setItem('mode','light');
 
           }}>
             {mode === "light" ? <i class="fa-solid fa-moon"></i> : <i class="fa-solid fa-sun"></i>}
