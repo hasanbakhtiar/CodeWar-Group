@@ -9,10 +9,12 @@ import { Button } from 'react-bootstrap';
 import { useCart } from 'react-use-cart';
 import { useWishlist } from 'react-use-wishlist';
 import { ModeContext } from '../context/ModeContext';
+import { LangContext } from '../context/LangContext';
 
 
 
 const Header = () => {
+  const [lang,setLang] = useContext(LangContext);
   const { totalItems } = useCart();
   const {totalWishlistItems}= useWishlist();
   const [product] = useContext(ProductContext);
@@ -26,7 +28,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
 
-            <LinkContainer to="/"><Nav.Link >Home</Nav.Link></LinkContainer>
+            <LinkContainer to="/"><Nav.Link >{lang ==='az'? 'Ana Sehife':'Home'}</Nav.Link></LinkContainer>
 
             <LinkContainer to="/products"><Nav.Link >Products({product.length})</Nav.Link></LinkContainer>
 
@@ -80,6 +82,10 @@ const Header = () => {
           }}>
             {mode === "light" ? <i class="fa-solid fa-moon"></i> : <i class="fa-solid fa-sun"></i>}
           </button>
+
+          <button className='btn btn-primary ms-3' onClick={()=>{
+            lang ==='az'?setLang('en'):setLang("az");
+          }}>{lang ==='az' ? "EN":"AZ"}</button>
 
         </Navbar.Collapse>
       </Container>

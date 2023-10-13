@@ -11,6 +11,7 @@ import Cart from './pages/Cart'
 import { WishlistProvider } from 'react-use-wishlist'
 import Wishlist from './pages/Wishlist'
 import { ModeContext, ModeProvider } from './context/ModeContext'
+import { LangProvider } from './context/LangContext'
 
 
 const Main = () => {
@@ -40,9 +41,11 @@ const Main = () => {
 const App = () => {
     return (
         <BrowserRouter>
-            <ModeProvider>
-                <Main />
-            </ModeProvider>
+            <LangProvider>
+                <ModeProvider>
+                    <Main />
+                </ModeProvider>
+            </LangProvider>
         </BrowserRouter>
     )
 }
