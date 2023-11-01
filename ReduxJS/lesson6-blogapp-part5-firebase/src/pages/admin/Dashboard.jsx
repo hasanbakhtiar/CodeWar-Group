@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
-import { removeBlog } from '../../manager/action/blogAction';
+import {  removeBlogFromDatabase } from '../../manager/action/blogAction';
 
 const Dashboard = () => {
 
@@ -29,7 +29,7 @@ const Dashboard = () => {
                          <td>{item.title}</td>
                          <td>{item.desc}</td>
                          <td><Link to={`/dashboard/edit/${item.id}`} className='btn btn-warning'>Edit</Link></td>
-                         <td><button className='btn btn-danger' onClick={()=>{dispatch(removeBlog({id:item.id}))}}>X</button></td>
+                         <td><button className='btn btn-danger' onClick={()=>{dispatch(removeBlogFromDatabase(item.id))}}>X</button></td>
                      </tr>
                        ))}
                         

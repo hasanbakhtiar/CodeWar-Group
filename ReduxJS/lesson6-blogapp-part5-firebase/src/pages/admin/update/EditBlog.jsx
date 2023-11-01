@@ -2,7 +2,7 @@ import React from 'react'
 import BlogForm from '../BlogForm'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { editBlog } from '../../../manager/action/blogAction';
+import {  editBlogFromDatabase } from '../../../manager/action/blogAction';
 
 const EditBlog = () => {
 
@@ -16,8 +16,9 @@ const EditBlog = () => {
     <div>
         <BlogForm editblog={blogData} 
         onFormSubmit={fd=>{
-            dispatch(editBlog(blogData.id,fd));
+            dispatch(editBlogFromDatabase(blogData.id,fd));
             navigate('/dashboard');
+            window.location.reload();
         }}
         />
     </div>

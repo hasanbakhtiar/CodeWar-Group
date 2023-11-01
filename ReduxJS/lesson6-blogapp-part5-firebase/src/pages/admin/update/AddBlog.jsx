@@ -1,7 +1,7 @@
 import React from 'react'
 import BlogForm from '../BlogForm'
 import { useDispatch } from 'react-redux';
-import { addBlog } from '../../../manager/action/blogAction';
+import {  addBlogToDatabase } from '../../../manager/action/blogAction';
 import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
@@ -10,8 +10,9 @@ const AddBlog = () => {
   return (
     <div>
         <BlogForm onFormSubmit={fd=>{
-            dispatch(addBlog(fd));
+            dispatch(addBlogToDatabase(fd));
             navigate('/dashboard');
+            // window.location.reload();
         }}/>
     </div>
   )
