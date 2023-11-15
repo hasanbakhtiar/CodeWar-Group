@@ -1,0 +1,8 @@
+// $base-color: rgb(102, 85, 0);
+
+// @for $i from 0 through 11 {
+//   li:nth-child(3n + #{$i}) {
+//     background-color: lighten($base-color, $i * 3%);
+//     color: lighten(rgb(102, 0, 0), $i * 5%);
+//   }
+// }
