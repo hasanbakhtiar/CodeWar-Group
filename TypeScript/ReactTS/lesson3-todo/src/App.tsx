@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { add } from "./features/todoSlice";
+import { useAppDispact, useAppSelector } from "./store";
 
 const App = () => {
 
     const [text,setText] = useState<string>("");
-    const todoData:any = useSelector((p:any)=>p.todos);
-    const dispatch:any = useDispatch();
+    const todoData:any = useAppSelector((p:any)=>p.todos);
+    const dispatch:any = useAppDispact();
     const handleSubmited =(event:React.FormEvent)=>{
         event.preventDefault();
         dispatch(add(text));
