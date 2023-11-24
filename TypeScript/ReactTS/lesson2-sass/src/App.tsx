@@ -28,11 +28,16 @@ const App: React.FC = () => {
             {id:crypto.randomUUID(),text:comingtext}
         ])
     }
+    const todoDeleteHandler=(todoId:string)=>{
+        setTodos((prevTodo)=>{
+            return prevTodo.filter((todo)=>todo.id !== todoId);
+        })
+    }
   return (
     <div className="d-flex align-items-center justify-content-center flex-column">
       <h1 className="my-5">Todo App</h1>
       <NewTodo onAddTodo={todoAddHandler} />
-      <TodoList items={todos} />
+      <TodoList items={todos} ondeleteTodo = {todoDeleteHandler}/>
     </div>
   );
 };
