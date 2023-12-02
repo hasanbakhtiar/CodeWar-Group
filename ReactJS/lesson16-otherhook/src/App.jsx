@@ -1,32 +1,17 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
-
-
-const MyInput =forwardRef((props,ref)=>{
-
-    useImperativeHandle(ref,()=>({
-        hi:sayHi
-    }))
-
-    const sayHi=()=>{
-        alert("new value")
-    }
-  
-    return <div><input type="text" /></div>
-})
-
-
+import {useState,useEffect, useLayoutEffect} from 'react';
 
 
 const App = () => {
-    const inputRef  = useRef();
-    const handleClick = ()=>{
-        inputRef.current.hi();
-    }
-    return (
-        <div style={{"display":"flex"}}>
-         <MyInput ref={inputRef} /><button onClick={handleClick}>send</button>
-        </div>
-    )
+   const [data,setData] = useState("hello")
+    useLayoutEffect(()=>{ 
+        // alert('hello')
+        setData('bye')
+    },[])
+  return (
+    <div>
+        {data}
+    </div>
+  )
 }
 
 export default App
